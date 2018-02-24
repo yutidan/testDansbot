@@ -39,7 +39,7 @@ def get_weather(id=524901):
     response=requests.get("http://api.openweathermap.org/data/2.5/weather", params=params)
     return response.json()
     
- def main():  
+def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
         data=last_update(get_updates_json(url))
